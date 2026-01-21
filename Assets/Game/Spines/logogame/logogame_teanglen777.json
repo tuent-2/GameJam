@@ -1,0 +1,92 @@
+{
+"skeleton": {
+	"hash": "Na9bSXF3EYk",
+	"spine": "4.2.43",
+	"x": -372.7,
+	"y": -150.55,
+	"width": 758,
+	"height": 352,
+	"images": "./images/",
+	"audio": "./audio"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "txt", "parent": "root", "x": 1.2, "y": 67.09 },
+	{ "name": "crown", "parent": "root", "x": -106.24, "y": 158.22 },
+	{ "name": "light", "parent": "crown", "x": -0.13, "y": -15.83 },
+	{ "name": "777", "parent": "root", "x": 8.01, "y": -76.48 },
+	{ "name": "led", "parent": "root", "x": 7.22, "y": 0.11 }
+],
+"slots": [
+	{ "name": "bg", "bone": "root", "attachment": "bg" },
+	{ "name": "led", "bone": "led", "attachment": "led" },
+	{ "name": "led2", "bone": "led", "attachment": "led", "blend": "additive" },
+	{ "name": "777", "bone": "777", "attachment": "777" },
+	{ "name": "txt_eng", "bone": "txt", "attachment": "txt_eng" },
+	{ "name": "txt_eng2", "bone": "txt", "attachment": "txt_eng", "blend": "additive" },
+	{ "name": "i_crow", "bone": "crown", "attachment": "i_crow" },
+	{ "name": "light copy 5", "bone": "light", "attachment": "light copy 5", "blend": "additive" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"777": {
+				"777": { "x": -1.21, "y": -1.57, "width": 375, "height": 145 }
+			},
+			"bg": {
+				"bg": { "x": 6.3, "y": -8.55, "width": 758, "height": 260 }
+			},
+			"i_crow": {
+				"i_crow": { "x": -0.46, "y": -0.77, "width": 112, "height": 88 }
+			},
+			"led": {
+				"led": { "x": -1.42, "y": -3.66, "width": 703, "height": 204 }
+			},
+			"led2": {
+				"led": { "x": -1.42, "y": -3.66, "width": 703, "height": 204 }
+			},
+			"light copy 5": {
+				"light copy 5": { "x": 0.02, "y": 0.04, "width": 100, "height": 95 }
+			},
+			"txt_eng": {
+				"txt_cam": { "x": -0.9, "y": -2.14, "width": 491, "height": 178 },
+				"txt_eng": { "x": -0.9, "y": -2.14, "width": 604, "height": 165 }
+			},
+			"txt_eng2": {
+				"txt_cam": { "x": -0.9, "y": -2.14, "width": 491, "height": 178 },
+				"txt_eng": { "x": -0.9, "y": -2.14, "width": 604, "height": 165 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"slots": {
+			"led2": {
+				"rgba": [
+					{ "color": "ffffff00" },
+					{ "time": 1, "color": "ffffffa6" },
+					{ "time": 2, "color": "ffffff00" }
+				]
+			},
+			"txt_eng2": {
+				"rgba": [
+					{ "color": "ffffff00" },
+					{ "time": 1, "color": "ffffff71" },
+					{ "time": 2, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"light": {
+				"scale": [
+					{},
+					{ "time": 1, "x": 0.5, "y": 0.5 },
+					{ "time": 2 }
+				]
+			}
+		}
+	}
+}
+}

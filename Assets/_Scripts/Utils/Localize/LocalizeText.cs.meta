@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 497d4dcfae7946beaed083dbae12b44e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - stringEvent: {instanceID: 0}
+  - txtContent: {instanceID: 0}
+  - bengaliFont: {fileID: 11400000, guid: 5016ca47334f71642beddebe224ad73c, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

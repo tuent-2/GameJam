@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: f18f30abfcc44ffc8684502c59d48c9d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - tgEffect: {instanceID: 0}
+  - clickSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

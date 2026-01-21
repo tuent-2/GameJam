@@ -1,0 +1,257 @@
+{
+"skeleton": {
+	"hash": "UeOEZP8PIvU",
+	"spine": "4.2.43",
+	"x": -570.97,
+	"y": -594.26,
+	"width": 966,
+	"height": 1558,
+	"images": "./images/",
+	"audio": "./audio"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "all", "parent": "root", "x": -172.96, "y": -17.13 },
+	{ "name": "Char", "parent": "all", "length": 183.95, "rotation": 82.97, "x": -0.17, "y": 17.25 },
+	{ "name": "Char2", "parent": "Char", "length": 275.24, "rotation": -27.61, "x": 183.95 },
+	{ "name": "Char3", "parent": "Char2", "length": 123.7, "rotation": 22.48, "x": 275.24 },
+	{ "name": "head copy", "parent": "Char3", "length": 177.55, "rotation": 15.09, "x": 104.19, "y": 34.59 },
+	{ "name": "eyes", "parent": "head copy", "x": 141.21, "y": 9.46 },
+	{ "name": "baptaytrai", "parent": "Char2", "length": 394.25, "rotation": -111.52, "x": 356.17, "y": -88.19 },
+	{ "name": "canhtaytrai", "parent": "baptaytrai", "length": 299.32, "rotation": -73.64, "x": 388.43, "y": -8.68 },
+	{ "name": "bantaytrai", "parent": "canhtaytrai", "length": 100.69, "rotation": -57.32, "x": 306.39, "y": -4.11 },
+	{ "name": "baptayphai", "parent": "Char2", "length": 364.5, "rotation": -169.54, "x": 245.62, "y": 111.71 },
+	{ "name": "canhtayphai", "parent": "baptayphai", "length": 347.29, "rotation": -147.65, "x": 453.21, "y": -4.94 },
+	{ "name": "bantayphai", "parent": "canhtayphai", "length": 91.82, "rotation": 47.71, "x": 361.52, "y": 3.8 },
+	{ "name": "card", "parent": "root", "length": 66.01, "rotation": 93.67, "x": -432.61, "y": 490.45 },
+	{ "name": "hair_bg", "parent": "head copy", "length": 200.49, "rotation": -177.07, "x": 248.22, "y": -80.54 },
+	{ "name": "hair_bg2", "parent": "hair_bg", "length": 182.64, "rotation": -5.09, "x": 200.49 },
+	{ "name": "hair_bg3", "parent": "hair_bg2", "length": 162.31, "rotation": 1.37, "x": 182.64 },
+	{ "name": "hair_bg4", "parent": "hair_bg3", "length": 173.38, "rotation": 11.92, "x": 162.31 },
+	{ "name": "dayvai", "parent": "Char", "length": 123.43, "rotation": -178.28, "x": -42.84, "y": 10.35 },
+	{ "name": "dayvai2", "parent": "dayvai", "length": 137.34, "rotation": -6.7, "x": 123.43 },
+	{ "name": "dayvai3", "parent": "dayvai2", "length": 124.83, "rotation": -0.33, "x": 137.34 },
+	{ "name": "dayvai4", "parent": "dayvai3", "length": 164.26, "rotation": 5.01, "x": 124.83 },
+	{ "name": "mouth", "parent": "head copy", "x": 51.81, "y": 7.72 }
+],
+"slots": [
+	{ "name": "hair_bg", "bone": "hair_bg", "attachment": "hair_bg" },
+	{ "name": "Layer 3", "bone": "root", "attachment": "Layer 3" },
+	{ "name": "baptayphai", "bone": "baptayphai", "attachment": "baptayphai" },
+	{ "name": "Char", "bone": "Char", "attachment": "Char" },
+	{ "name": "canhtayphai", "bone": "canhtayphai", "attachment": "canhtayphai" },
+	{ "name": "bantayphai", "bone": "bantayphai", "attachment": "bantayphai" },
+	{ "name": "dayvai", "bone": "dayvai", "attachment": "dayvai" },
+	{ "name": "baptaytrai", "bone": "baptaytrai", "attachment": "baptaytrai" },
+	{ "name": "bantaytrai", "bone": "bantaytrai", "attachment": "bantaytrai" },
+	{ "name": "canhtaytrai", "bone": "canhtaytrai", "attachment": "canhtaytrai" },
+	{ "name": "head copy", "bone": "head copy", "attachment": "head copy" },
+	{ "name": "eyes2", "bone": "root" },
+	{ "name": "eyes", "bone": "eyes", "attachment": "eyes" },
+	{ "name": "mouth", "bone": "mouth", "attachment": "mouth" },
+	{ "name": "ring", "bone": "root", "attachment": "ring" },
+	{ "name": "card", "bone": "card", "attachment": "card" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"bantayphai": {
+				"bantayphai": { "x": 98.41, "y": 29.16, "rotation": -145.87, "width": 250, "height": 147 }
+			},
+			"bantaytrai": {
+				"bantaytrai": { "x": 102.16, "y": 18.38, "rotation": -172.87, "width": 235, "height": 176 }
+			},
+			"baptayphai": {
+				"baptayphai": { "x": 206.02, "y": 12.39, "rotation": 114.19, "width": 218, "height": 439 }
+			},
+			"baptaytrai": {
+				"baptaytrai": { "x": 219.41, "y": -0.08, "rotation": 56.17, "width": 297, "height": 419 }
+			},
+			"canhtayphai": {
+				"canhtayphai": { "x": 185.49, "y": 1.59, "rotation": -98.16, "width": 130, "height": 403 }
+			},
+			"canhtaytrai": {
+				"canhtaytrai": { "x": 232.66, "y": -39.72, "rotation": 129.81, "width": 482, "height": 346 }
+			},
+			"card": {
+				"card": { "x": 49.52, "y": -5.82, "rotation": -93.67, "width": 226, "height": 165 }
+			},
+			"Char": {
+				"Char": {
+					"type": "mesh",
+					"uvs": [ 0.08765, 0.56136, 0.08765, 0.35465, 0.31194, 0.21395, 0.53623, 0.07325, 0.76618, 0.06978, 0.80953, 0.21395, 0.85288, 0.35813, 0.80427, 0.40933, 0.69456, 0.52488, 1, 0.72116, 1, 1, 0.15173, 1 ],
+					"triangles": [ 6, 2, 5, 5, 3, 4, 5, 2, 3, 8, 1, 7, 1, 2, 7, 6, 7, 2, 11, 9, 10, 9, 0, 8, 9, 11, 0, 0, 1, 8 ],
+					"vertices": [ 1, 2, -20.3, 107.08, 1, 3, 2, 254.4, 140.98, 0.22565, 3, -2.93, 157.57, 0.77308, 4, -196.8, 251.95, 0.00127, 2, 3, 230.74, 150.83, 0.6336, 4, 16.54, 156.39, 0.3664, 2, 3, 464.4, 144.1, 7.6E-4, 4, 229.88, 60.83, 0.99924, 1, 4, 264.34, -76.88, 1, 3, 2, 495.91, -278.01, 0.00252, 3, 405.29, -101.74, 0.07606, 4, 81.27, -143.72, 0.92142, 3, 2, 307.59, -328.19, 0.11465, 3, 261.68, -233.49, 0.5789, 4, -101.8, -210.57, 0.30646, 3, 2, 235.88, -306.82, 0.23065, 3, 188.23, -247.8, 0.60766, 4, -175.14, -195.71, 0.16169, 3, 2, 74.03, -258.58, 0.76992, 3, 22.46, -280.08, 0.22288, 4, -340.66, -162.16, 0.0072, 2, 2, -163.74, -477.8, 0.9995, 3, -86.61, -584.54, 5.0E-4, 1, 2, -534.29, -523.52, 1, 1, 2, -598.38, -4.08, 1 ],
+					"hull": 12,
+					"edges": [ 20, 22, 22, 0, 0, 2, 6, 8, 20, 18, 16, 18, 0, 16, 12, 14, 14, 16, 2, 14, 2, 4, 4, 6, 8, 10, 10, 12, 4, 10 ],
+					"width": 617,
+					"height": 1339
+				}
+			},
+			"dayvai": {
+				"dayvai": {
+					"type": "mesh",
+					"uvs": [ 1, 0.2382, 1, 0.37286, 0.97189, 0.46973, 0.90742, 0.69186, 0.818, 1, 0.21559, 1, 0.38859, 0.69325, 0.51322, 0.47224, 0.64791, 0.23341, 0.77955, 0, 1, 0 ],
+					"triangles": [ 4, 6, 3, 5, 6, 4, 3, 7, 2, 6, 7, 3, 8, 0, 1, 1, 7, 8, 2, 7, 1, 9, 10, 0, 8, 9, 0 ],
+					"vertices": [ 2, 18, 119.7, 29.89, 0.5555, 19, -7.2, 29.25, 0.4445, 2, 19, 67.35, 45.11, 0.99949, 20, -70.25, 44.71, 5.1E-4, 2, 19, 122.28, 50.39, 0.71152, 20, -15.35, 50.3, 0.28848, 2, 20, 110.54, 63.13, 0.57806, 21, -8.73, 64.13, 0.42194, 1, 21, 166.8, 66.61, 1, 1, 21, 183.94, -66.63, 1, 2, 20, 136.04, -49.73, 0.31752, 21, 6.82, -50.52, 0.68248, 2, 19, 144.96, -49.36, 0.36411, 20, 7.9, -49.31, 0.63589, 2, 18, 124.27, -48.54, 0.44858, 19, 6.49, -48.11, 0.55142, 1, 18, -9.99, -31.55, 1, 1, 18, -14.54, 17.4, 1 ],
+					"hull": 11,
+					"edges": [ 18, 20, 8, 10, 16, 18, 2, 0, 0, 20, 16, 0, 14, 16, 2, 4, 14, 4, 10, 12, 12, 14, 4, 6, 6, 8, 12, 6 ],
+					"width": 223,
+					"height": 566
+				}
+			},
+			"eyes": {
+				"eyes": { "x": 6.19, "y": -14.98, "rotation": -92.92, "width": 194, "height": 52 },
+				"eyes2": { "x": 2.67, "y": -15.3, "rotation": -92.92, "width": 191, "height": 45 }
+			},
+			"hair_bg": {
+				"hair_bg": {
+					"type": "mesh",
+					"uvs": [ 1, 0.40438, 1, 0.70219, 0.71942, 1, 0.54297, 1, 0.16231, 0.68609, 0, 0.58102, 0, 0.3526, 0.20791, 0.27951, 0.23566, 0, 0.80071, 0 ],
+					"triangles": [ 1, 3, 0, 3, 4, 0, 2, 3, 1, 5, 6, 7, 4, 5, 7, 0, 4, 7, 9, 7, 8, 7, 9, 0 ],
+					"vertices": [ 4, 14, 332.01, 281.85, 0.10199, 15, 105.98, 292.41, 0.58625, 16, -69.66, 294.16, 0.29029, 17, -166.24, 335.71, 0.02147, 4, 14, 565.76, 257.91, 0, 15, 340.93, 289.32, 0.16923, 16, 165.15, 285.46, 0.48107, 17, 61.72, 278.72, 0.3497, 2, 16, 393.67, 106.85, 0.00429, 17, 248.44, 56.78, 0.99571, 2, 16, 389.72, -0.01, 0.00268, 17, 222.51, -46.96, 0.99732, 3, 15, 321.55, -218.11, 0.32587, 16, 133.67, -221.36, 0.66896, 17, -73.72, -210.68, 0.00517, 3, 14, 408.92, -335.2, 0.00467, 15, 237.37, -315.37, 0.5825, 16, 47.19, -316.59, 0.41283, 3, 14, 229.63, -316.84, 0.06377, 15, 57.16, -313, 0.76567, 16, -132.91, -309.92, 0.17056, 3, 14, 185.1, -185.62, 0.32414, 15, 1.15, -186.26, 0.64143, 16, -185.88, -181.87, 0.03443, 2, 14, -32.57, -146.42, 0.98203, 15, -219.14, -166.54, 0.01797, 3, 14, 2.31, 194.21, 0.93297, 15, -214.63, 175.85, 0.06692, 16, -392.96, 185.28, 1.1E-4 ],
+					"hull": 10,
+					"edges": [ 12, 14, 14, 16, 16, 18, 18, 0, 10, 12, 10, 8, 8, 6, 4, 6, 0, 2, 4, 2 ],
+					"width": 606,
+					"height": 789
+				}
+			},
+			"head copy": {
+				"head copy": { "x": 201.58, "y": -32.81, "rotation": -92.92, "width": 443, "height": 485 }
+			},
+			"Layer 3": {
+				"Layer 3": { "x": 147.03, "y": 358.74, "width": 104, "height": 180 }
+			},
+			"mouth": {
+				"mouth": { "x": -1.26, "y": -7.8, "rotation": -92.92, "width": 101, "height": 50 }
+			},
+			"ring": {
+				"ring": { "x": 111.53, "y": 587.24, "width": 21, "height": 59 }
+			}
+		}
+	}
+],
+"animations": {
+	"loading": {
+		"slots": {
+			"eyes": {
+				"attachment": [
+					{ "time": 1, "name": "eyes2" },
+					{ "time": 1.1667, "name": "eyes" }
+				]
+			}
+		},
+		"bones": {
+			"baptayphai": {
+				"rotate": [
+					{},
+					{ "time": 0.8333, "value": 2.21 },
+					{ "time": 2 }
+				]
+			},
+			"bantayphai": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 11.05 },
+					{ "time": 2 }
+				]
+			},
+			"card": {
+				"translate": [
+					{},
+					{ "time": 1, "y": -22.9 },
+					{ "time": 2 }
+				]
+			},
+			"hair_bg3": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": -8.41 },
+					{ "time": 2 }
+				]
+			},
+			"dayvai": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 3.5 },
+					{ "time": 2 }
+				]
+			},
+			"dayvai3": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": -5.87 },
+					{ "time": 2 }
+				]
+			}
+		}
+	},
+	"tutorial": {
+		"slots": {
+			"card": {
+				"attachment": [
+					{}
+				]
+			},
+			"eyes": {
+				"attachment": [
+					{ "time": 1, "name": "eyes2" },
+					{ "time": 1.1667, "name": "eyes" }
+				]
+			}
+		},
+		"bones": {
+			"baptayphai": {
+				"rotate": [
+					{},
+					{ "time": 0.8333, "value": 2.21 },
+					{ "time": 2 }
+				]
+			},
+			"bantayphai": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 11.05 },
+					{ "time": 2 }
+				]
+			},
+			"card": {
+				"translate": [
+					{},
+					{ "time": 1, "y": -22.9 },
+					{ "time": 2 }
+				]
+			},
+			"hair_bg3": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": -8.41 },
+					{ "time": 2 }
+				]
+			},
+			"dayvai": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 3.5 },
+					{ "time": 2 }
+				]
+			},
+			"dayvai3": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": -5.87 },
+					{ "time": 2 }
+				]
+			},
+			"mouth": {
+				"scale": [
+					{},
+					{ "time": 1, "x": 0.894 },
+					{ "time": 2 }
+				]
+			}
+		}
+	}
+}
+}
