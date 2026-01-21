@@ -92,6 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChonLopButton
   idLop: 1
   chonLopButton: {fileID: 7041699530131853528}
+  chonLopButtonImage: {fileID: 4799043371948212138}
 --- !u!114 &7041699530131853528
 MonoBehaviour:
   m_ObjectHideFlags: 0
