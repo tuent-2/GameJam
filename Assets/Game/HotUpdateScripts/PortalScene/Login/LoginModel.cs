@@ -8,6 +8,8 @@ public class LoginModel : Singleton<LoginModel>
 {
     public const int EXPIRE_TIME = 1600;
     public string LoginToken { get; private set; } = "";
+    public bool needUpdate { get; private set; } = false;
+    public string loginSession { get; private set; }  = "";
 
     /*public string AuthId { get; private set; } = "";*/
     public bool IsLogin => !string.IsNullOrEmpty(LoginToken);
@@ -22,7 +24,7 @@ public class LoginModel : Singleton<LoginModel>
         Loading.Open();
         Api.Login((d) =>
         {
-            Logger.Log($"on login success");
+            Logger.Log($"on login API success");
             if (isRemember)
             {
                 LocalStorageUtils.LoginUsername = username;
@@ -162,81 +164,19 @@ public class LoginModel : Singleton<LoginModel>
 
     private void OnLoginResponseSuccess(JObject data)
     {
-        string msgEn = (string?)data["message_en"];
-        string msgKm = (string?)data["message_km"];
-        bool _isKhmer = LocalizationSettings.SelectedLocale ==
-                        LocalizationSettings.AvailableLocales.Locales[LocalizeText.KHMER_POSITION];
-
-
-        if (!string.IsNullOrEmpty(msgEn) || !string.IsNullOrEmpty(msgKm))
-        {
-            string showMsg;
-            if (_isKhmer)
-            {
-                showMsg = !string.IsNullOrWhiteSpace(msgKm) ? msgKm
-                    : !string.IsNullOrWhiteSpace(msgEn) ? msgEn
-                    : "Your account has been banned.";
-            }
-            else
-            {
-                // ưu tiên tiếng Anh, fallback sang Khmer
-                showMsg = !string.IsNullOrWhiteSpace(msgEn) ? msgEn
-                    : !string.IsNullOrWhiteSpace(msgKm) ? msgKm
-                    : "Your account has been banned.";
-            }
-
-            // ✨ Tìm khoảng trắng đầu tiên và thêm \n
-            if (!string.IsNullOrEmpty(showMsg.Trim()))
-            {
-                int spaceIndex = showMsg.IndexOf(' ');
-                if (spaceIndex >= 0)
-                {
-                    showMsg = showMsg.Substring(0, spaceIndex) + "\n" + showMsg.Substring(spaceIndex + 1);
-                }
-            }
-
-
-            Loading.Close();
-            Toast.ShowString(showMsg, isClearOther: true);
-
-            return; // dừng login
-        }
-
-        string error = (string?)data["error"];
-        // if (string.IsNullOrEmpty(error))
-        //     LoginWithUsernamePassword(username, password);
-        if (!string.IsNullOrEmpty(error))
-        {
-            string showMsg;
-            switch (error)
-            {
-                case "ldv":
-                    Toast.Show(GameMsg.REGISTER_TOMANYACCOUNT);
-                    break;
-                case "ld":
-                    Toast.Show(GameMsg.REGISTER_DAILYLIMIT);
-                    break;
-
-                default:
-                    Toast.ShowString("Can't Login");
-                    break;
-            }
-
-            Loading.Close();
-
-            return; // dừng login
-        }
-
-
         LoginToken = (string)data["token"];
         UserModel.Instance.Uid = (int)data["uid"];
-        if (LoginToken == null)
-        {
-            Debug.LogError("Login token is null");
-            return;
-        }
-
-        CheckAndRefreshToken();
+        Debug.Log((bool) data["needUpdate"]);
+        needUpdate = (bool) data["needUpdate"];
+        loginSession = (string)data["sid"];
+        SmartFoxConnection.Instance.Connect();
+        // if (LoginToken == null)
+        // {
+        //     Debug.LogError("Login token is null");
+        //     return;
+        // }
+        //
+        // CheckAndRefreshToken();
        // PortalModel.Instance.GetPortalConfigInfo(data);
     }
 

@@ -12,6 +12,7 @@ using Sfs2X.Requests;
 using Sfs2X.Util;
 using strange.extensions.signal.impl;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SmartFoxConnection : MonoSingleton<SmartFoxConnection>
 {
@@ -47,10 +48,10 @@ public class SmartFoxConnection : MonoSingleton<SmartFoxConnection>
         _connectTimeout = StartCoroutine(IEConnectTimeout());
         ConfigData cfg = new ConfigData
         {
-            Zone = "Dân Làng Hạ",
-            Debug = true,
+            Zone = "sfsak",
+            Debug = false,
             Host = "dev.sandinhstudio.com",
-            Port = 9013
+            Port = 9012
         };
         _config = cfg;
         // cfg.BlueBox.IsActive = false;
@@ -64,6 +65,12 @@ public class SmartFoxConnection : MonoSingleton<SmartFoxConnection>
             yield return Helpers.GetWaitForSeconds(_CONNECT_TIME_OUT);
             OnLostConnectionFromServer.Dispatch();
         }
+    }
+
+    public void OnLoginRequest()
+    {
+        Debug.Log("OnLoginRequest");
+        Sfs.Send(new LoginRequest(UserModel.Instance.Uid.ToString()));
     }
 
     private void InitSmartFox()
@@ -199,18 +206,18 @@ public class SmartFoxConnection : MonoSingleton<SmartFoxConnection>
 
     private void PingServer()
     {
-        if (!_ENABLE_CLIENT_PING) return;
-        StopPingServer();
-        _clientConnectionCoroutine = StartCoroutine(IEAutoPingServer());
-
-        IEnumerator IEAutoPingServer()
-        {
-            while (isActiveAndEnabled)
-            {
-                SendExt(ExtCmd.CLIENT_PING);
-                yield return Helpers.GetWaitForSeconds(_CLIENT_PING_PERIOD);
-            }
-        }
+        // if (!_ENABLE_CLIENT_PING) return;
+        // StopPingServer();
+        // _clientConnectionCoroutine = StartCoroutine(IEAutoPingServer());
+        //
+        // IEnumerator IEAutoPingServer()
+        // {
+        //     while (isActiveAndEnabled)
+        //     {
+        //         SendExt(ExtCmd.CLIENT_PING);
+        //         yield return Helpers.GetWaitForSeconds(_CLIENT_PING_PERIOD);
+        //     }
+        // }
     }
 
     public void StopPingServer()
@@ -224,8 +231,8 @@ public class SmartFoxConnection : MonoSingleton<SmartFoxConnection>
 
     private void OnPingPong(BaseEvent evt)
     {
-        var lagValue = (int)evt.Params["lagValue"];
-        OnPingPongUpdate.Dispatch(lagValue);
+        //var lagValue = (int)evt.Params["lagValue"];
+        //OnPingPongUpdate.Dispatch(lagValue);
     }
 
     public void StartClientConnectTimeOut()
@@ -248,16 +255,14 @@ public class SmartFoxConnection : MonoSingleton<SmartFoxConnection>
         }
         if ((bool)evt.Params["success"])
         {
-            Debug.Log("Connection Successful!");
-            // Logger.Log("SFS2X API version: " + Sfs.Version + ", " + UserModel.Instance.Uid);
-            // Logger.Log("Connection mode is: " + Sfs.ConnectionMode);
             var packet = new SFSObject();
-            // packet.PutUtfString("s", LoginModel.Instance.LoginToken);
-            // packet.PutUtfString("i", LoginModel.Instance.IPAddress);
-            // packet.PutUtfString("dc", GameUtils.GetDeviceId());
-            // packet.PutUtfString("v", GameUtils.GetPlatform() + "-" + LauncherInfo.LauncherBundleVersion);
 
-            //Sfs.Send(new LoginRequest(UserModel.Instance.Uid.ToString(), "", _config.Zone, packet));
+            packet.PutInt("v", 326);
+            packet.PutUtfString("dt", "Android");
+            packet.PutUtfString("va", "2.0.2");
+            packet.PutUtfString("bv", "2.0.1_75_Android");
+            packet.PutUtfString("s", LoginModel.Instance.loginSession);
+            Sfs.Send(new LoginRequest(UserModel.Instance.Uid.ToString(), "", "sfsak", packet));
         }
         else
         {
@@ -384,11 +389,14 @@ public class SmartFoxConnection : MonoSingleton<SmartFoxConnection>
 
     private void OnLogin(BaseEvent evt)
     {
+        Debug.Log("OnLogin Smart fox");
         Sfs.EnableLagMonitor(true);
-        if (_connectTimeout != null) StopCoroutine(_connectTimeout);
-        StartClientConnectTimeOut();
-        PingServer();
+        //if (_connectTimeout != null) StopCoroutine(_connectTimeout);
+        //StartClientConnectTimeOut();
+        //PingServer();
         OnConnectionSuccess.Dispatch();
+        
+        SceneManager.LoadScene("LeaderBoardScene");
     }
 
     public Room GetLastJoinedRoom()

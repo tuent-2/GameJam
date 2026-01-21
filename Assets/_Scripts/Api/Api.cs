@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Sfs2X.Entities.Data;
 using UnityEngine;
 
 public static class Api
@@ -28,19 +30,41 @@ public static class Api
         HttpUtils.SendRequest("GET", fullUrl,
             onSuccess: (responseText) => { onSuccess?.Invoke(JObject.Parse(responseText)); }, onFailure: onFailure);
     }
-
+    
     public static void Login(Action<JObject> onSuccess, Action<string> onFailure,
         string username, string password, string deviceId)
     {
-        //https://acc.xm82asz.org/api/user/login
+        var packet = new SFSObject();
+        //https://acc.xm82asz.org/api/user/
+            
+        // packet.PutInt("app", 6);
+        // packet.PutUtfString("deviceId", GameUtils.GetDeviceId());
+        // packet.PutUtfString("version", "2.1.0");
+        // //packet.PutUtfString("npt", null);
+        // packet.PutUtfString("packageName", "");
+        // packet.PutUtfString("os", GameUtils.GetPlatform());
+        // {"username":"tuent2","pass":"132456","agent":{"app":6,"os":"Android","version":"2.0.2","deviceId":"73eded60897550606bf8c97056bc293702463e95","npt":"chanhoi","packageName":"chan.hoi.online"}}
+        var agent = new JObject
+        {
+            { "app", 6 },
+            { "os", GameUtils.GetPlatform() },
+            { "version", "2.0.2" },
+            { "deviceId", GameUtils.GetDeviceId() },
+            { "npt", "chanhoi" },
+            { "packageName", "chan.hoi.online" }
+        };
+
         var data = new JObject
         {
             { "username", username },
-            { "device", deviceId }
+            { "pass", "" },  
+            { "agent", agent }
         };
+        
+        
         HttpUtils.SendRequest("POST",
             
-            "https://dev.sandinhstudio.com/api-c3/user/jam-login",
+            "https://dev.sandinhstudio.com/api-c3/user/login",
             data.ToString(),
             (responseText) => { onSuccess?.Invoke(JObject.Parse(responseText)); }, onFailure);
     }
@@ -146,5 +170,34 @@ public static class Api
             EncryptUtils.Decrypt("gr0EUFGASebMbUfFhnAo7oKTY/UiN9X5xWZbx1ZnR15Kf+GijUgwlgSJiHoRqO01") + "?t="
             + DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
             onSuccess: (responseText) => { onSuccess?.Invoke(responseText); }, onFailure: onFailure);
+    }
+}
+
+
+[Serializable]
+public class AgentData
+{
+    public int app;
+    public string os;
+    public string version;
+    public string deviceId;
+    public string npt;
+    public string packageName;
+
+    public static AgentData Create()
+    {
+        var obj = new AgentData();
+        obj.app = 6;
+        obj.os = GameUtils.GetPlatform();
+        obj.version = GameUtils.GetVersion();
+        obj.deviceId = GameUtils.GetDeviceId();
+        obj.packageName = "chan.hoi.online";
+        obj.npt = "chanhoi";
+        return obj;
+    }
+
+    public string ToJson()
+    {
+        return JsonConvert.SerializeObject(this);
     }
 }
