@@ -86,7 +86,7 @@ namespace Game.HotUpdateScripts.Utils.Localize
         {
             animType = AnimType.Localize;
             if (LocalizationSettings.SelectedLocale ==
-                LocalizationSettings.AvailableLocales.Locales[LocalizeText.KHMER_POSITION])
+                LocalizationSettings.AvailableLocales.Locales[LocalizeText.VN_POSITION])
             {
                 spine.SetAnimation(cambodiaKey, isLoop);
             }
@@ -104,7 +104,7 @@ namespace Game.HotUpdateScripts.Utils.Localize
             animType = AnimType.LocalizeMix;
             autoStartAnim = false;
             if (LocalizationSettings.SelectedLocale ==
-                LocalizationSettings.AvailableLocales.Locales[LocalizeText.KHMER_POSITION])
+                LocalizationSettings.AvailableLocales.Locales[LocalizeText.VN_POSITION])
             {
                 spine.SetAnimation(popCambodiaKey, false);
                 spine.AddAnimation(idleCambodiaKey);

@@ -10,10 +10,10 @@ using UnityEditor;
 [RequireComponent(typeof(TextMeshProUGUI), typeof(LocalizeStringEvent))]
 public class LocalizeText : MonoBehaviour
 {
-    public const string TABLE_NAME = "Cambodia table";
+    public const string TABLE_NAME = "Localization";
     public const int ENGLISH_POSITION = 0;
-    public const int KHMER_POSITION = 1;
-    public const int BENGALI_POSITION = 2;
+    public const int VN_POSITION = 1;
+  //  public const int BENGALI_POSITION = 2;
     [SerializeField] private LocalizeStringEvent stringEvent;
     [SerializeField] private TextMeshProUGUI txtContent;
     [SerializeField] private LocalizedString localizedString;
@@ -93,14 +93,14 @@ public class LocalizeText : MonoBehaviour
         var currentLocale = LocalizationSettings.SelectedLocale;
 
 
-        if (currentLocale == LocalizationSettings.AvailableLocales.Locales[BENGALI_POSITION])
-        {
-            txtContent.font = bengaliFont;
-        }
-        else
-        {
-            txtContent.font = _khmerFont;
-        }
+        // if (currentLocale == LocalizationSettings.AvailableLocales.Locales[BENGALI_POSITION])
+        // {
+        //     txtContent.font = bengaliFont;
+        // }
+        // else
+        // {
+        //     txtContent.font = _khmerFont;
+        // }
 
 
         string localizedText = stringEvent.StringReference.GetLocalizedString();
@@ -119,7 +119,7 @@ public class LocalizeText : MonoBehaviour
         var usedColor = useGradientColor ? txtContent.colorGradientPreset.bottomRight : txtContent.color;
 
         // Áp dụng xử lý font Khmer + màu
-        txtContent.text = KhmerFontAdjuster.AdjustWithColor(content, usedColor);
+        txtContent.text = content;
     }
 
 

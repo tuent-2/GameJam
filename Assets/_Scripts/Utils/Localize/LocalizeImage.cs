@@ -29,7 +29,7 @@ public class LocalizeImage : MonoBehaviour
      private void UpdateIconAnimation(Locale obj)
      {  
          bool isKhmer = LocalizationSettings.SelectedLocale ==
-                        LocalizationSettings.AvailableLocales.Locales[LocalizeText.KHMER_POSITION];    
+                        LocalizationSettings.AvailableLocales.Locales[LocalizeText.VN_POSITION];    
         imageLocalize.sprite = isKhmer ? sprKhmer : sprEnglish;   
      }
 }

@@ -39,7 +39,7 @@ public static class LocalStorageUtils
 {
     public static int Localization
     {
-        get => PlayerPrefs.GetInt(LocalStorageEnum.Localization.ToString(), LocalizeText.KHMER_POSITION);
+        get => PlayerPrefs.GetInt(LocalStorageEnum.Localization.ToString(), LocalizeText.VN_POSITION);
         set => PlayerPrefs.SetInt(LocalStorageEnum.Localization.ToString(), value);
     }
 
