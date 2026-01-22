@@ -1,0 +1,6 @@
+[submodule "Assets/PTTSharedLibrary/Core"]
+	path = Assets/PTTSharedLibrary/Core
+	url = git@gitlab.com:PTTz/ptt_lib_core.git
+[submodule "Assets/PTTSharedLibrary/ScriptSP"]
+	path = Assets/PTTSharedLibrary/ScriptSP
+	url = git@gitlab.com:PTTz/ptt_lib_scriptsp.git
