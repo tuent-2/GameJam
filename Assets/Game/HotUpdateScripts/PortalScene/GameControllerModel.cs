@@ -68,6 +68,7 @@ public class GameControllerModel : Singleton<GameControllerModel>
     
     public void SendGetLeaderBoard()
     {
+        Debug.Log("SendGetLeaderBoard");
         SmartFoxConnection.Instance.SendExt(Cmd.LeaderBoardJam);
     }
 
