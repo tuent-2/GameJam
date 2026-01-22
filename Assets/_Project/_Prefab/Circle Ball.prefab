@@ -220,7 +220,7 @@ MonoBehaviour:
   _iLogIndex: 0
   _layerTarget:
     serializedVersion: 2
-    m_Bits: 130359
+    m_Bits: 55
   col: {fileID: 0}
 --- !u!1 &3407362068534180722
 GameObject:
