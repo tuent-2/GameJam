@@ -5,29 +5,36 @@ using UnityEngine;
 
 public class ScoreJamResponseVO : IFromSFSObject
 {
-    public List<Score> scores;
+    public List<PlayData> playDatas;
 
     public void FromSfsObject(ISFSObject o)
     {
         var data = o.GetSFSArray("s");
-        scores = new List<Score>();
+        playDatas = new List<PlayData>();
         foreach (SFSObject result in data)
         {
-            scores.Add(new Score(result));
+            playDatas.Add(new PlayData(result));
         }
     }
     
     [Serializable]
-    public class Score
+    public class PlayData
     {
         public readonly int id;
         public readonly int score;
+        public readonly string name;
+        public readonly int camelId;
+        public readonly bool isDisconnet;
       
 
-        public Score(SFSObject data)
+        public PlayData(SFSObject data)
         {
             id = data.GetInt("uid");
             score = data.GetInt("s");
+            name = data.GetUtfString("n");
+            camelId = data.GetInt("c");
+            isDisconnet = data.GetBool("id");
+           
         }
     }
 }

@@ -7,4 +7,6 @@ public static class Cmd
     public const string PlayScoreDataCmd = "scorejam";
     public const string QuesCmd = "quesJam";
     public const string PlayReq = "playjam";
+    public const string UserData = "userjam";
+    public const string CancelReq = "cancel";
 }
