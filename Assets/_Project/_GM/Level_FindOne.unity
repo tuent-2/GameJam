@@ -2390,7 +2390,7 @@ MonoBehaviour:
   _bDisplayLog: 0
   _sDebugLog: 
   _iLogIndex: 0
-  _sSceneName: Level_Balance
+  _sSceneName: Level_FindOne
   _btnRetry: {fileID: 632200457}
   _btnLeave: {fileID: 332745836}
   _scaleAnimDuration: 0.3
@@ -2451,7 +2451,7 @@ MonoBehaviour:
   _bDisplayLog: 0
   _sDebugLog: 
   _iLogIndex: 0
-  _sSceneName: Level_Balance
+  _sSceneName: Level_FindOne
   _btnNext: {fileID: 1662651620}
   _btnLeave: {fileID: 985397637}
   _scaleAnimDuration: 0.3
