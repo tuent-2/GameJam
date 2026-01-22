@@ -19,28 +19,50 @@ public class InGamePopup:BasePopup<InGamePopup>
 
     private void OnEnable()
     {
-        UpdateUI();
-        GameControllerModel.Instance.scoreJamResponse.OnChanged += UpdateUI;
+        Debug.Log(GameControllerModel.Instance.quesJamResponse.Value != null);
+       
+            
+            if (GameControllerModel.Instance.quesJamResponse.Value != null)
+            {
+                UpdateUIQuesJam();
+            }
+
+        if (GameControllerModel.Instance.scoreJamResponse.Value != null)
+        {
+            UpdateUIScoreJam();
+        }
+
+        GameControllerModel.Instance.quesJamResponse.OnChanged += UpdateUIQuesJam;
+        GameControllerModel.Instance.scoreJamResponse.OnChanged += UpdateUIScoreJam;
     }
 
     private void OnDisable()
     {
-        GameControllerModel.Instance.scoreJamResponse.OnChanged -= UpdateUI;
+        GameControllerModel.Instance.quesJamResponse.OnChanged -= UpdateUIQuesJam;
+        GameControllerModel.Instance.scoreJamResponse.OnChanged -= UpdateUIScoreJam;
     }
 
-    public void UpdateUI()
+    public void UpdateUIScoreJam()
     {
-        txtQuest.text = $"{GameControllerModel.Instance.quesJamResponse.Value.id}/5";
+        Debug.Log("UpdateUIScoreJam");
         for (int i = 0; i < GameControllerModel.Instance.scoreJamResponse.Value.playDatas.Count; i++)
         {
             playerUI[i].SetUpUI(GameControllerModel.Instance.scoreJamResponse.Value.playDatas[i].id == UserModel.Instance.Uid
-                    ,  GameControllerModel.Instance.scoreJamResponse.Value.playDatas[i].name, GameControllerModel.Instance.scoreJamResponse.Value.playDatas[i].camelId,GameControllerModel.Instance.scoreJamResponse.Value.playDatas[i].score );
+                ,  GameControllerModel.Instance.scoreJamResponse.Value.playDatas[i].name, GameControllerModel.Instance.scoreJamResponse.Value.playDatas[i].camelId,GameControllerModel.Instance.scoreJamResponse.Value.playDatas[i].score );
         }
+    }
+
+    public void UpdateUIQuesJam()
+    {
+        
+        Debug.Log("UpdateUIQuesJamResponse");
+        txtCountQuest.text = $"{GameControllerModel.Instance.quesJamResponse.Value.id}/5";
+        
 
         txtQuest.text = GameControllerModel.Instance.quesJamResponse.Value.question;
         for (int i = 0; i < GameControllerModel.Instance.quesJamResponse.Value.answersDetail.Count; i++)
         {
-            buttons[i].SetUpUi(GameControllerModel.Instance.quesJamResponse.Value.answersDetail[i].id, GameControllerModel.Instance.quesJamResponse.Value.answersDetail[i].content);
+            buttons[i].SetUpUi(i, GameControllerModel.Instance.quesJamResponse.Value.answersDetail[i].questionContent);
         }
         
         StartCountTime();

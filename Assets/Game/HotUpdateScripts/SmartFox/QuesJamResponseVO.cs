@@ -7,35 +7,35 @@ public class QuesJamResponseVO : IFromSFSObject
 {
     public int id { get; set; }
     public string question { get; set; }
-    public List<AnswersDetail> answersDetail { get; set; }
+    public List<Content> answersDetail { get; set; }
     public int answerCorrectly { get; set; }
     
     
     public void FromSfsObject(ISFSObject o)
     {
-        id = o.GetInt("mi");
-        question = o.GetUtfString("mt");
+        id = o.GetInt("id");
+        question = o.GetUtfString("q");
         
         var data = o.GetSFSArray("a");
-        answersDetail = new List<AnswersDetail>();
+        answersDetail = new List<Content>();
         foreach (SFSObject result in data)
         {
-            answersDetail.Add(new AnswersDetail(result));
+            answersDetail.Add(new Content(result));
         }
         answerCorrectly = o.GetInt("ac");
     }
     
-    
     [Serializable]
-    public class AnswersDetail
+    public class Content
     {
-        public readonly int id;
-        public readonly string content;
         
-        public AnswersDetail(SFSObject data)
+        public readonly string questionContent;
+        
+        public Content(SFSObject data)
         {
-            id = data.GetInt("id");
-            content = data.GetUtfString("c");
+            questionContent = data.GetUtfString("d");
+
         }
     }
+   
 }

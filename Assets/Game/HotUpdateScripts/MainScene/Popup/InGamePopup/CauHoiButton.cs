@@ -11,6 +11,7 @@ public class CauHoiButton : MonoBehaviour
     public static event Action<int> OnSelectAnswerButton;
     public void SetUpUi(int idCauHoi, string noiDung)
     {
+        Debug.Log($"CauHoiButton {idCauHoi} {noiDung}");
         SelectButton.interactable = true;
         txtContent.text = noiDung;
         id = idCauHoi;

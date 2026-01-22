@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AvatarConfigs
   avatarList:
   - avatarId: 1
-    avatarIcon: {fileID: 0}
+    avatarIcon: {fileID: 21300000, guid: b6975c3de651f42babaed097a5f3312b, type: 3}
   - avatarId: 2
-    avatarIcon: {fileID: 0}
+    avatarIcon: {fileID: 21300000, guid: c4534b7c1c9584e9e933dfe49af170eb, type: 3}
   - avatarId: 3
-    avatarIcon: {fileID: 0}
+    avatarIcon: {fileID: 21300000, guid: c06fecf5f5c014aba8e7992f21a0cc8f, type: 3}

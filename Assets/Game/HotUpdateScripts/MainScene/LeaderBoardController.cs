@@ -12,7 +12,9 @@ public class LeaderBoardController : MonoBehaviour
         {
             ChonLopPopup.Open();
         }
-       
+
+        GameControllerModel.Instance.SendGetLeaderBoard();
+
     }
 
     private void OnEnable()

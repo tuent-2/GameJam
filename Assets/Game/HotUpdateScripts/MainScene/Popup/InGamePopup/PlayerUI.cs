@@ -11,9 +11,11 @@ public class PlayerUI : MonoBehaviour
     
     public void SetUpUI(bool isUser, string playerName, int camel, int score)
     {
+        Debug.Log($"PlayerUI {isUser} {playerName} {score}");
         ImgBG.color = isUser ? Color.chocolate : Color.blueViolet;
-        txtName.text = name;
-        ImgAvatar.sprite = AvatarConfig.GetAvatarById(camel).AvatarIcon;
-        txtScore.DOIncreaseMoney(long.Parse(txtScore.text), (long)score, 1f);
+        txtName.text = playerName;
+       //ImgAvatar.sprite = AvatarConfig.GetAvatarById(camel).AvatarIcon;
+     //   txtScore.DOIncreaseMoney(long.Parse(txtScore.text), (long)score, 1f);
+        txtScore.text = score.ToString();
     }
 }
