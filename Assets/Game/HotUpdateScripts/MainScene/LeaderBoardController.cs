@@ -19,12 +19,26 @@ public class LeaderBoardController : MonoBehaviour
             ChonLopPopup.Open();
         }
 
-        GameControllerModel.Instance.SendGetLeaderBoard();
+    
 
+    }
+
+    [Button]
+    public void SendGetLeaderBoard()
+    {
+        GameControllerModel.Instance.SendGetLeaderBoard();
     }
 
     private void OnEnable()
     {
+        StartCoroutine(Init());
+       
+    }
+
+    private IEnumerator Init()
+    {
+        yield return new WaitForEndOfFrame();
+        SendGetLeaderBoard();
         GameControllerModel.Instance.leaderBoardResponse.OnChanged += OnChanged;
     }
 

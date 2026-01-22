@@ -224,6 +224,8 @@ MonoBehaviour:
   _sceneHistory:
   - name: LeaderBoardScene
     path: Assets/Scenes/LeaderBoardScene.unity
+  - name: LoginScene
+    path: Assets/Scenes/LoginScene.unity
   - name: DemoScene_CasualGame
     path: Assets/Layer Lab/GUI Pro-CasualGame/Scenes/DemoScene_CasualGame.unity
   - name: PTTDevelopmentScene
