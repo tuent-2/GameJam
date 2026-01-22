@@ -46,6 +46,7 @@ public class GameControllerModel : Singleton<GameControllerModel>
         var data = new SumUpVO();
         data.FromSfsObject(sfsObject);
         sumUpResponse.SetValue(data);
+        Debug.Log("UpdateSumUpResponse " +sumUpResponse.Value.isWin);
         if (sumUpResponse.Value.isWin)
         {
             WinPopup.Open();

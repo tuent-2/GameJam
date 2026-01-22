@@ -244,7 +244,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 4583061993486217339}
   canvas: {fileID: 6139254906359697045}
   content: {fileID: 3177044484678844604}
-  showLayer: 1
+  showLayer: 1000
   moveType: 0
   openEase: 27
   closeEase: 2
@@ -515,7 +515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Th\u1EAFng"
+  m_text: "B\u1EA1n \u0110\xE3 Th\u1EAFng"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: b246c4190f4e46ec9352fe15a7b09ce0, type: 2}

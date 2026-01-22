@@ -299,7 +299,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Thua
+  m_text: "B\u1EA1n \u0111\xE3 thua"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: b246c4190f4e46ec9352fe15a7b09ce0, type: 2}
@@ -689,7 +689,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 7310306514499845293}
   canvas: {fileID: 8671167814371141876}
   content: {fileID: 7089824746657110411}
-  showLayer: 1
+  showLayer: 10000
   moveType: 0
   openEase: 27
   closeEase: 2

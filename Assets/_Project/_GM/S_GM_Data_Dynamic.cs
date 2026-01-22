@@ -10,7 +10,7 @@ namespace Data
         public ProjectDataDynamic dataCurrent;
         private void Awake()
         {
-            HandleLocalDataServices.LocalDataPrefix = localDataPrefixKey;
+           HandleLocalDataServices.LocalDataPrefix = localDataPrefixKey;
             Application.targetFrameRate = 60;
             DontDestroyOnLoad(this.gameObject);
             this.LoadLocalData();

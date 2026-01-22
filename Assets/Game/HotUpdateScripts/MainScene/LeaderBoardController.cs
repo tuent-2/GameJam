@@ -14,16 +14,17 @@ public class LeaderBoardController : MonoBehaviour
     [SerializeField] private Button btnThanhTich;
 
     [SerializeField] private List<Character> _listChar;
-
+    static bool canShow = true;
     private void Awake()
     {
         Debug.Log(LoginModel.Instance.needUpdate);
-        if (LoginModel.Instance.needUpdate)
+        if (LoginModel.Instance.needUpdate && canShow)
         {
             ChonLopPopup.Open();
+            canShow = false;
         }
     }
-
+    
     [Button]
     public void SendGetLeaderBoard()
     {
