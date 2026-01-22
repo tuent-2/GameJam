@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LeaderBoardScene.unity
     guid: 86c8c41467cf24b49b96a5dbc3350750
+  - enabled: 1
+    path: Assets/_Project/_GM/Level_Balance.unity
+    guid: 93f61d71b7d07434193976ffe864a83f
+  - enabled: 1
+    path: Assets/_Project/_GM/Level_FindOne.unity
+    guid: 2862f04d30466754bb2dff2df93c8516
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 385ccb0929827f042afad6d8beae9fd8, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
