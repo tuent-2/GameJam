@@ -154,6 +154,7 @@ Transform:
   - {fileID: 74008924}
   - {fileID: 950362450}
   - {fileID: 867642521}
+  - {fileID: 1056303525}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &15178749
@@ -178,6 +179,7 @@ MonoBehaviour:
   - {fileID: 1467828369}
   - {fileID: 950362449}
   - {fileID: 867642522}
+  - {fileID: 1056303526}
 --- !u!1 &49142849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,6 +1224,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993673128}
   m_CullTransparentMesh: 1
+--- !u!1 &1056303524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1056303525}
+  - component: {fileID: 1056303526}
+  m_Layer: 0
+  m_Name: S_GM_ScoreUpdate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1056303525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056303524}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 15178748}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1056303526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056303524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7468ac9dc52afd942b77e61fa411368f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_GM_ScoreUpdate
+  _bConsoleLog: 1
+  _bDisplayLog: 0
+  _sDebugLog: 
+  _iLogIndex: 0
+  _iGameID: 1
 --- !u!1 &1100748574
 GameObject:
   m_ObjectHideFlags: 0

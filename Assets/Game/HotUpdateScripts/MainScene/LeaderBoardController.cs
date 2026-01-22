@@ -11,7 +11,7 @@ public class LeaderBoardController : MonoBehaviour
     [SerializeField] private Button btnStartPlay_1v1;
     [SerializeField] private Button btnStartPlay_EzWeight;
     [SerializeField] private Button btnStartPlay_HardWeight;
-    [SerializeField] private Button btnStartPlay, btnThanhTich;
+    [SerializeField] private Button btnThanhTich;
 
     [SerializeField] private List<Character> _listChar;
 

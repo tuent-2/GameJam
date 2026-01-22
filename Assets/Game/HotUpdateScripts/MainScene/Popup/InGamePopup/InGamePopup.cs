@@ -56,7 +56,7 @@ public class InGamePopup:BasePopup<InGamePopup>
     {
         
         Debug.Log("UpdateUIQuesJamResponse");
-        txtCountQuest.text = $"{GameControllerModel.Instance.quesJamResponse.Value.id}/5";
+        txtCountQuest.text = $"{GameControllerModel.Instance.quesJamResponse.Value.id+1}/5";
         
 
         txtQuest.text = GameControllerModel.Instance.quesJamResponse.Value.question;

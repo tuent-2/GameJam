@@ -5853,7 +5853,7 @@ MonoBehaviour:
   btnStartPlay_EzWeight: {fileID: 708626399}
   btnStartPlay_HardWeight: {fileID: 759774951}
   btnStartPlay: {fileID: 0}
-  btnThanhTich: {fileID: 0}
+  btnThanhTich: {fileID: 1437509382}
   _listChar:
   - {fileID: 1484594739}
   - {fileID: 2035092970}

@@ -102,6 +102,7 @@ public class GameControllerModel : Singleton<GameControllerModel>
         paramsObj.PutInt("s", score);
        
         SmartFoxConnection.Instance.SendExt(Cmd.UpdateScore, paramsObj);
+        Debug.Log($"GameControllerModel UpdateScore id [{gameId}] score [{score}] ");
     }
     
 }
