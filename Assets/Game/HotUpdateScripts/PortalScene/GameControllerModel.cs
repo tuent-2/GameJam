@@ -7,6 +7,7 @@ public class GameControllerModel : Singleton<GameControllerModel>
     public readonly Observable<QuesJamResponseVO> quesJamResponse = new();
     
     public readonly Observable<UserDataResponse>  userDataResponse = new();
+    public readonly Observable<LeaderBoardSO>  leaderBoardResponse = new();
     
     public void UpdateCorePlayer()
     {
@@ -40,6 +41,14 @@ public class GameControllerModel : Singleton<GameControllerModel>
         data.FromSfsObject(sfsObject);
         userDataResponse.SetValue(data);
     }
+
+    public void UpdateLeaderBoardJamResponse(SFSObject sfsObject)
+    {
+        var data = new LeaderBoardSO();
+        data.FromSfsObject(sfsObject);
+        leaderBoardResponse.SetValue(data);
+    }
+    
     /// <summary>
     /// /////////////
     /// </summary>
@@ -56,7 +65,7 @@ public class GameControllerModel : Singleton<GameControllerModel>
     {
         var paramsObj = new SFSObject();
         paramsObj.PutInt("s", subjectId);
-        SmartFoxConnection.Instance.SendExt(Cmd.UpdateClassJam, paramsObj);
+        SmartFoxConnection.Instance.SendExt(Cmd.StartJam, paramsObj);
     }
 
     public void SendCancelMatching()

@@ -16,6 +16,9 @@ public class GameConnection : BaseConnection
             case Cmd.UserData:
                 GameControllerModel.Instance.UpdateUserData(data);
                 break;
+            case Cmd.LeaderBoardJam:
+                GameControllerModel.Instance.UpdateLeaderBoardJamResponse(data);
+                break;
         }
     }
 }

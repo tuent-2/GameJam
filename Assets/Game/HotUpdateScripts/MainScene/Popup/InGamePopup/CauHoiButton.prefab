@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CauHoiButton
   txtContent: {fileID: 8866290351665763876}
+  SelectButton: {fileID: 7035091756513652422}
 --- !u!1 &6764683353161895567
 GameObject:
   m_ObjectHideFlags: 0

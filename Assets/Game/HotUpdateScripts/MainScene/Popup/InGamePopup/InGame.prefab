@@ -462,8 +462,8 @@ MonoBehaviour:
   - {fileID: 5164782831554522495}
   - {fileID: 3835814802987391308}
   - {fileID: 3325295196243584458}
-  imgBgCountTime: {fileID: 0}
-  txtTime: {fileID: 0}
+  imgBgCountTime: {fileID: 3914202636833213689}
+  txtTime: {fileID: 3150966715756536519}
   playerUI:
   - {fileID: 7142547135505802220}
   - {fileID: 2438740398184005121}

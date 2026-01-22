@@ -15,6 +15,16 @@ public class LeaderBoardController : MonoBehaviour
        
     }
 
+    private void OnEnable()
+    {
+        //GameControllerModel.Instance.leaderBoardResponse.OnChanged += 
+    }
+
+    private void OnDisable()
+    {
+        //GameControllerModel.Instance.leaderBoardResponse.OnChanged -= 
+    }
+
     private void Start()
     {
         btnStartPlay.onClick.AddListener(OnClickStartPlay);

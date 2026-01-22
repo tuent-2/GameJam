@@ -11,6 +11,24 @@ public class LoadinngPopup : BasePopup<LoadinngPopup>
         btnCancel.onClick.AddListener(OnClickCancel);
     }
 
+    private void OnEnable()
+    {
+        GameControllerModel.Instance.scoreJamResponse.OnChanged += OpenUI;
+    }
+
+    private void OnDisable()
+    {
+        GameControllerModel.Instance.scoreJamResponse.OnChanged -= OpenUI;
+    }
+
+    private void OpenUI()
+    {
+        InGamePopup.Open();
+        Close();
+        
+    }
+
+
     private void OnClickCancel()
     {
         GameControllerModel.Instance.SendCancelMatching();
