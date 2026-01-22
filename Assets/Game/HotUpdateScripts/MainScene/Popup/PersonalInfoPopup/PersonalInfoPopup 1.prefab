@@ -474,6 +474,10 @@ MonoBehaviour:
   _tmpGame1Info: {fileID: 7161452835193670673}
   _tmpGame2Info: {fileID: 994181874351662897}
   _tmpGame3Info: {fileID: 8682786323185063609}
+  _sprites:
+  - {fileID: 2504532114124488943, guid: 925311bdeafc9f74a9e98ea1e213a657, type: 3}
+  - {fileID: 2062236913554221422, guid: 028c112d0a23d644495d8deacb4a092e, type: 3}
+  - {fileID: 7791803439642564503, guid: 1893308a32f215d4b82d351ea86801ed, type: 3}
 --- !u!1 &3058183357689923039
 GameObject:
   m_ObjectHideFlags: 0

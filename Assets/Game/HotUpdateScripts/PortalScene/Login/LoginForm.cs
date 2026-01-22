@@ -91,7 +91,7 @@ public class LoginForm : MonoBehaviour
     {
         lines = new string[]
         {
-            "Chào mừng đến với bình nguyên vô tận",
+            "Chào mừng đến với bài thi của Loading Team",
         };
 
         foreach (char c in lines[index].ToCharArray())

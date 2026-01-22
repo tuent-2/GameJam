@@ -11,4 +11,5 @@ public static class Cmd
     public const string UserData = "userjam";
     public const string CancelReq = "cancel";
     public const string LeaderBoardJam = "leaderboardjam";
+    public const string Result = "result";
 }

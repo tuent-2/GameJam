@@ -9,6 +9,7 @@ public class GameControllerModel : Singleton<GameControllerModel>
     public readonly Observable<UserDataResponse>  userDataResponse = new();
     public readonly Observable<LeaderBoardSO>  leaderBoardResponse = new();
     
+    public readonly Observable<SumUpVO>   sumUpResponse = new();
     public void QuesJamResponse(SFSObject sfsObject)
     {
         Debug.Log("QuesJamResponse");
@@ -38,6 +39,21 @@ public class GameControllerModel : Singleton<GameControllerModel>
         var data = new LeaderBoardSO();
         data.FromSfsObject(sfsObject);
         leaderBoardResponse.SetValue(data);
+    }
+
+    public void UpdateSumUpResponse(SFSObject sfsObject)
+    {
+        var data = new SumUpVO();
+        data.FromSfsObject(sfsObject);
+        sumUpResponse.SetValue(data);
+        if (sumUpResponse.Value.isWin)
+        {
+            WinPopup.Open();
+        }
+        else
+        {
+            LosePopup.Open();
+        }
     }
     
     /// <summary>

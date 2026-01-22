@@ -95,7 +95,10 @@ MonoBehaviour:
   txtScore: {fileID: 9173257275619051169}
   ImgAvatar: {fileID: 4625564605466765776}
   ImgBG: {fileID: 6812125451953266414}
-  AvatarConfig: {fileID: 11400000, guid: f51ef7a8a81e6e441a3c239ab67affa7, type: 2}
+  AvatarSprites:
+  - {fileID: 2504532114124488943, guid: 925311bdeafc9f74a9e98ea1e213a657, type: 3}
+  - {fileID: 2062236913554221422, guid: 028c112d0a23d644495d8deacb4a092e, type: 3}
+  - {fileID: 7791803439642564503, guid: 1893308a32f215d4b82d351ea86801ed, type: 3}
 --- !u!1 &6195532524739763232
 GameObject:
   m_ObjectHideFlags: 0

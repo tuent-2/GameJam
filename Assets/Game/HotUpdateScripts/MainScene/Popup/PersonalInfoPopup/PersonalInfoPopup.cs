@@ -32,7 +32,8 @@ public class PersonalInfoPopup : BasePopup<PersonalInfoPopup>
     private TextMeshProUGUI _tmpGame2Info;
     [SerializeField]
     private TextMeshProUGUI _tmpGame3Info;
-
+    
+    [SerializeField] private List<Sprite> _sprites;
     //===================================================================== Unity Methods
 
     private void Awake()
@@ -73,6 +74,7 @@ public class PersonalInfoPopup : BasePopup<PersonalInfoPopup>
 
     public void UpdatePopupVisual()
     {
+        _imgAvatar.sprite = _sprites[GameControllerModel.Instance.userDataResponse.Value.camelId % _sprites.Count];
         var data = GameControllerModel.Instance.userDataResponse.Value;
 
         _tmpTotalPlay.text = $"Tổng số lần chơi : <color=white>{data.sumGame}</color> lượt";

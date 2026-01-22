@@ -19,6 +19,9 @@ public class GameConnection : BaseConnection
             case Cmd.LeaderBoardJam:
                 GameControllerModel.Instance.UpdateLeaderBoardJamResponse(data);
                 break;
+            case Cmd.Result:
+                GameControllerModel.Instance.UpdateSumUpResponse(data);
+                break;
         }
     }
 }

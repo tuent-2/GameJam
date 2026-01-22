@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,14 +8,14 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI txtName,txtScore;
     [SerializeField] private Image ImgAvatar;
     [SerializeField] private Image ImgBG;
-    [SerializeField] private AvatarConfigs AvatarConfig;
-    
+   // [SerializeField] private AvatarConfigs AvatarConfig;
+    [SerializeField] private List<Sprite> AvatarSprites;
     public void SetUpUI(bool isUser, string playerName, int camel, int score)
     {
         Debug.Log($"PlayerUI {isUser} {playerName} {score}");
         ImgBG.color = isUser ? Color.chocolate : Color.blueViolet;
         txtName.text = playerName;
-        //ImgAvatar.sprite = AvatarConfig.GetAvatarById(camel).AvatarIcon;
+        ImgAvatar.sprite = AvatarSprites[camel % AvatarSprites.Count ];
      //   txtScore.DOIncreaseMoney(long.Parse(txtScore.text), (long)score, 1f);
         txtScore.text = score.ToString();
     }
