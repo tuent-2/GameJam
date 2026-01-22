@@ -9,5 +9,5 @@ public static class Cmd
     public const string PlayReq = "playjam";
     public const string UserData = "userjam";
     public const string CancelReq = "cancel";
-    public const string LeaderBoardJam = "leaderBoardJam";
+    public const string LeaderBoardJam = "leaderboardjam";
 }

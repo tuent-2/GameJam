@@ -49,7 +49,7 @@ public class LeaderBoardController : MonoBehaviour
 
         while (value == null && retryCount < maxRetries)
         {
-            Debug.Log("Wait 1 frame");
+           // Debug.Log("Wait 1 frame");
             yield return null; // Đợi 1 frame
             value = GameControllerModel.Instance.leaderBoardResponse.Value;
             retryCount++;
