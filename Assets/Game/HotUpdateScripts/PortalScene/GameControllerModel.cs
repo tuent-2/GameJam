@@ -80,5 +80,14 @@ public class GameControllerModel : Singleton<GameControllerModel>
         paramsObj.PutInt("qid", questionId);
         SmartFoxConnection.Instance.SendExt(Cmd.PlayReq, paramsObj);
     }
+
+    public void UpdateScore(int gameId, int score)
+    {
+        var paramsObj = new SFSObject();
+        paramsObj.PutInt("gId", gameId);
+        paramsObj.PutInt("s", score);
+       
+        SmartFoxConnection.Instance.SendExt(Cmd.UpdateScore, paramsObj);
+    }
     
 }

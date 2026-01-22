@@ -1,4 +1,5 @@
 
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
@@ -21,7 +22,11 @@ public class LoginForm : MonoBehaviour
     private static bool hasCheckedCountry = false;
 
     [SerializeField] private Button Test;
-
+    
+    [SerializeField] private TextMeshProUGUI txtContent;
+    [SerializeField] float textSpeed;
+    [SerializeField] private FocusItem Item;
+    [SerializeField] private GameObject UISheep;
     private void TestAction()
     {
        // NotificationNewVersionPopup.Open();
@@ -39,7 +44,7 @@ public class LoginForm : MonoBehaviour
         //     LocalizationSettings.AvailableLocales.Locales[LocalStorageUtils.Localization];
 
 
-        Loading.Open();
+       // Loading.Open();
        // UserModel.Instance.IsUseDiamond = true;
 
         // if (!hasCheckedCountry)
@@ -77,9 +82,46 @@ public class LoginForm : MonoBehaviour
         //         UserModel.Instance.IsUseDiamond = false;
         //     }*/
         // }
+        
+        StartCoroutine(TypeLine());
     }
+    private string[] lines;
+    private int index;
+    IEnumerator TypeLine()
+    {
+        lines = new string[]
+        {
+            "Chào mừng đến với bình nguyên vô tận",
+        };
 
+        foreach (char c in lines[index].ToCharArray())
+        {
+            txtContent.text += c;
+            yield return new WaitForSeconds(textSpeed / 2);
+        }
 
+        // Chờ 1 chút rồi chuyển sang dòng tiếp theo
+        yield return new WaitForSeconds(0.5f);
+        NextLine();
+    }
+    
+    void NextLine()
+    {
+        if (index < lines.Length - 1)
+        {
+            index++;
+            txtContent.text += "\n";
+            StartCoroutine(TypeLine());
+        }
+        else
+        {
+            UISheep.gameObject.SetActive(false);
+            Item.gameObject.SetActive(true);
+            Item.ShowView2();
+        }
+        
+    }
+    
     void RefreshLayout(GameObject go)
     {
         LayoutRebuilder.ForceRebuildLayoutImmediate(go.GetComponent<RectTransform>());
