@@ -25,6 +25,7 @@ public class UserDataResponse : IFromSFSObject
        
         
         var data = o.GetSFSArray("tt");
+        if (data != null ) return;
         ThanhTuus = new List<ThanhTuu>();
         foreach (SFSObject result in data)
         {
