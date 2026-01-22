@@ -11,6 +11,7 @@ public class LeaderBoardController : MonoBehaviour
     [SerializeField] private Button btnStartPlay_1v1;
     [SerializeField] private Button btnStartPlay_EzWeight;
     [SerializeField] private Button btnStartPlay_HardWeight;
+    [SerializeField] private Button btnStartPlay, btnThanhTich;
 
     [SerializeField] private List<Character> _listChar;
 
@@ -53,6 +54,12 @@ public class LeaderBoardController : MonoBehaviour
         btnStartPlay_EzWeight.onClick.AddListener(OnClickStartPlay_EzWeight);
         btnStartPlay_HardWeight.onClick.AddListener(OnClickStartPlay_HardWeight);  
         StartCoroutine(InitializeLeaderBoard());
+        btnThanhTich.onClick.AddListener(OnClickThanhTich);
+    }
+
+    private void OnClickThanhTich()
+    {
+        PersonalInfoPopup.Open();
     }
 
     private void OnClickStartPlay_EzWeight()

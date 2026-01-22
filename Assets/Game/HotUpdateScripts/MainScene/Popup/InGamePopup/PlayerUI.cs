@@ -14,7 +14,7 @@ public class PlayerUI : MonoBehaviour
         Debug.Log($"PlayerUI {isUser} {playerName} {score}");
         ImgBG.color = isUser ? Color.chocolate : Color.blueViolet;
         txtName.text = playerName;
-        ImgAvatar.sprite = AvatarConfig.GetAvatarById(camel).AvatarIcon;
+        //ImgAvatar.sprite = AvatarConfig.GetAvatarById(camel).AvatarIcon;
      //   txtScore.DOIncreaseMoney(long.Parse(txtScore.text), (long)score, 1f);
         txtScore.text = score.ToString();
     }
