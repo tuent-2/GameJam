@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3653398770286876207, guid: 6c939a206dd07724ba6e0eb11dfc77c0, type: 3}
+      propertyPath: listBallRef.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4390416403406053809, guid: 6c939a206dd07724ba6e0eb11dfc77c0, type: 3}
       propertyPath: _fWeight
       value: 2

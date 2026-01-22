@@ -3,11 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LeaderBoardController : MonoBehaviour
 {
-    [SerializeField] private Button btnStartPlay;
+    [SerializeField] private Button btnStartPlay_1v1;
+    [SerializeField] private Button btnStartPlay_EzWeight;
+    [SerializeField] private Button btnStartPlay_HardWeight;
 
     [SerializeField] private List<Character> _listChar;
 
@@ -46,8 +49,20 @@ public class LeaderBoardController : MonoBehaviour
 
     private void Start()
     {
-        btnStartPlay.onClick.AddListener(OnClickStartPlay);
+        btnStartPlay_1v1.onClick.AddListener(OnClickStartPlay_1v1);
+        btnStartPlay_EzWeight.onClick.AddListener(OnClickStartPlay_EzWeight);
+        btnStartPlay_HardWeight.onClick.AddListener(OnClickStartPlay_HardWeight);  
         StartCoroutine(InitializeLeaderBoard());
+    }
+
+    private void OnClickStartPlay_EzWeight()
+    {
+        SceneManager.LoadSceneAsync("Level_Balance",LoadSceneMode.Additive);
+    }
+
+    private void OnClickStartPlay_HardWeight()
+    {
+        SceneManager.LoadSceneAsync("Level_FindOne",LoadSceneMode.Additive);
     }
 
     private IEnumerator InitializeLeaderBoard()
@@ -76,7 +91,7 @@ public class LeaderBoardController : MonoBehaviour
         }
     }
 
-    private void OnClickStartPlay()
+    private void OnClickStartPlay_1v1()
     {
         StartPlayPopup.Open();
     }

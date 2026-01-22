@@ -9,6 +9,7 @@ using DG.Tweening;
 public class GUI_Win : ExtendMonoBehaviour
 {
     //===================================================================== Variables
+    [SerializeField] private string _sSceneName;
     [SerializeField] private Button _btnNext;
     [SerializeField] private Button _btnLeave;
 
@@ -127,14 +128,7 @@ public class GUI_Win : ExtendMonoBehaviour
 
 	private void OnClickLeave ()
 	{
-		// Best-effort: go back to build index 0 if possible, otherwise quit.
-		if (SceneManager.sceneCountInBuildSettings > 0)
-		{
-			SceneManager.LoadScene (0);
-			return;
-		}
-
-		Application.Quit ();
+		SceneManager.UnloadSceneAsync(_sSceneName);
 	}
     
     //===================================================================== Local Methods

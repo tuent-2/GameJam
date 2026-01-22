@@ -2232,6 +2232,7 @@ MonoBehaviour:
   _bDisplayLog: 0
   _sDebugLog: 
   _iLogIndex: 0
+  _sSceneName: Level_Balance
   _btnRetry: {fileID: 632200457}
   _btnLeave: {fileID: 332745836}
   _scaleAnimDuration: 0.3
@@ -2292,6 +2293,7 @@ MonoBehaviour:
   _bDisplayLog: 0
   _sDebugLog: 
   _iLogIndex: 0
+  _sSceneName: Level_Balance
   _btnNext: {fileID: 1662651620}
   _btnLeave: {fileID: 985397637}
   _scaleAnimDuration: 0.3
@@ -2619,34 +2621,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1118523965195753142, guid: 6c939a206dd07724ba6e0eb11dfc77c0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 5091603905484180540, guid: 6c939a206dd07724ba6e0eb11dfc77c0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 8498198614854780749, guid: 6c939a206dd07724ba6e0eb11dfc77c0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 3775234151349733652, guid: 6c939a206dd07724ba6e0eb11dfc77c0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 2264696924670789626, guid: 6c939a206dd07724ba6e0eb11dfc77c0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 2914280837302905842, guid: 6c939a206dd07724ba6e0eb11dfc77c0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 1490396465054634452, guid: 6c939a206dd07724ba6e0eb11dfc77c0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 8460943403527123508, guid: 6c939a206dd07724ba6e0eb11dfc77c0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 5776740295785830528, guid: 6c939a206dd07724ba6e0eb11dfc77c0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c939a206dd07724ba6e0eb11dfc77c0, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
