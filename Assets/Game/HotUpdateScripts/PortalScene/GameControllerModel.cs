@@ -9,8 +9,6 @@ public class GameControllerModel : Singleton<GameControllerModel>
     public readonly Observable<UserDataResponse>  userDataResponse = new();
     public readonly Observable<LeaderBoardSO>  leaderBoardResponse = new();
     
-  
-  
     public void QuesJamResponse(SFSObject sfsObject)
     {
         Debug.Log("QuesJamResponse");

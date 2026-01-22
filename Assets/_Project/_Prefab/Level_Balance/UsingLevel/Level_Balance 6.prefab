@@ -287,6 +287,10 @@ PrefabInstance:
       propertyPath: listBallRef.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3722627351102917937, guid: 6c939a206dd07724ba6e0eb11dfc77c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3792407516082001780, guid: 6c939a206dd07724ba6e0eb11dfc77c0, type: 3}
       propertyPath: m_IsActive
       value: 0

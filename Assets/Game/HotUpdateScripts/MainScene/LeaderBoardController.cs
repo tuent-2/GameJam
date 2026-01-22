@@ -18,9 +18,6 @@ public class LeaderBoardController : MonoBehaviour
         {
             ChonLopPopup.Open();
         }
-
-    
-
     }
 
     [Button]
@@ -91,22 +88,12 @@ public class LeaderBoardController : MonoBehaviour
         if (value?.LeaderBoards == null || _listChar == null)
             return;
 
-        // Update characters with leaderboard data (up to the minimum of both counts)
-        int updateCount = Mathf.Min(value.LeaderBoards.Count, _listChar.Count);
-        for (int i = 0; i < updateCount; i++)
+        for (int i = 0; i < _listChar.Count; i++)
         {
-            _listChar[i].UpdateVisualByData(value.LeaderBoards[i]);
-        }
-
-        // For characters beyond the leaderboard count, check if they need to be reset
-        // Note: Since LeaderBoard doesn't have a parameterless constructor,
-        // we skip characters that weren't updated in the loop above
-        for (int i = updateCount; i < _listChar.Count; i++)
-        {
-            if (_listChar[i].data == null)
-            {
+            if (i < value.LeaderBoards.Count)
+                _listChar[i].UpdateVisualByData(value.LeaderBoards[i]);
+            else
                 _listChar[i].FakeVisual();
-            }
         }
     }
 
