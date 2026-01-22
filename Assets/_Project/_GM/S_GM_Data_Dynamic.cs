@@ -6,9 +6,11 @@ namespace Data
 
     public class S_GM_Data_Dynamic : GMModuleBehaviour
     {
+        [SerializeField] private string localDataPrefixKey;
         public ProjectDataDynamic dataCurrent;
         private void Awake()
         {
+            HandleLocalDataServices.LocalDataPrefix = localDataPrefixKey;
             Application.targetFrameRate = 60;
             DontDestroyOnLoad(this.gameObject);
             this.LoadLocalData();
@@ -32,8 +34,9 @@ namespace Data
                 ProjectDataDynamic.Instance = dataCurrent;
             }
         }
+        
 
-        private static void SaveLocalData()
+        public static void SaveLocalData()
         {
             HandleLocalDataServices.Save(ProjectDataDynamic.Instance);
         }

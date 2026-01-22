@@ -106,6 +106,7 @@ public class GUI_Win : ExtendMonoBehaviour
 		if (data != null)
 		{
 			data.iCurrentLevel += 1;
+			S_GM_Data_Dynamic.SaveLocalData();
 		}
 		else
 		{

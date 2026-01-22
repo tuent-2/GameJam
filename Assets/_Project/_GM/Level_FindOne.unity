@@ -946,6 +946,7 @@ MonoBehaviour:
   _bDisplayLog: 0
   _sDebugLog: 
   _iLogIndex: 0
+  localDataPrefixKey: FindOne
   dataCurrent:
     setting:
       sound: 0
