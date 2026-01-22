@@ -39,6 +39,7 @@ public class GUI_Win : ExtendMonoBehaviour
 		{
 			_gmEvent.OnGameStateChange += HandleGameStateChange;
 			_isSubscribed = true;
+			
 		}
 
 		// Store original scale
