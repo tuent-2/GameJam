@@ -19,13 +19,13 @@ public class UserDataResponse : IFromSFSObject
         score = o.GetInt("s");
         camelId = o.GetInt("ci");
         sumGame = o.GetInt("tp");
-        sumGame = o.GetInt("tw");
-        sumGameWin = o.GetInt("a");
-        age = o.GetInt("ci");
-       
+        sumGameWin = o.GetInt("tw");
+        age = o.GetInt("a");
+        
         
         var data = o.GetSFSArray("tt");
-        if (data != null ) return;
+        
+        if (data == null || data.Count == 0) return;
         ThanhTuus = new List<ThanhTuu>();
         foreach (SFSObject result in data)
         {

@@ -22,6 +22,6 @@ public class LeaderBoardController : MonoBehaviour
 
     private void OnClickStartPlay()
     {
-        
+        StartPlayPopup.Open();
     }
 }

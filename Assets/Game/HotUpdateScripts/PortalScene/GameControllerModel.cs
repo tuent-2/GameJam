@@ -45,12 +45,10 @@ public class GameControllerModel : Singleton<GameControllerModel>
     /// </summary>
     /// <param name="classId"></param>
     /// <param name="location"></param>
-    public void SendSetUpClass(int classId, int location)
+    public void SendSetUpClass(int year)
     {
         var paramsObj = new SFSObject();
-        paramsObj.PutInt("id", classId);
-        paramsObj.PutInt("l", location);
-        
+        paramsObj.PutInt("y", year);
         SmartFoxConnection.Instance.SendExt(Cmd.UpdateClassJam, paramsObj);
     }
 
