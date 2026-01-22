@@ -98,6 +98,7 @@ public class GUI_Lose : ExtendMonoBehaviour
 	private void OnClickLeave ()
 	{
 		SceneManager.UnloadSceneAsync(_sSceneName);
+		SceneManager.LoadSceneAsync("LeaderBoardScene");
 	}
     
     //===================================================================== Local Methods

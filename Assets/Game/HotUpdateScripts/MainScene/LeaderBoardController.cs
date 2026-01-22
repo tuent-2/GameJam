@@ -64,12 +64,12 @@ public class LeaderBoardController : MonoBehaviour
 
     private void OnClickStartPlay_EzWeight()
     {
-        SceneManager.LoadSceneAsync("Level_Balance",LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("Level_Balance",LoadSceneMode.Single);
     }
 
     private void OnClickStartPlay_HardWeight()
     {
-        SceneManager.LoadSceneAsync("Level_FindOne",LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("Level_FindOne",LoadSceneMode.Single);
     }
 
     private IEnumerator InitializeLeaderBoard()

@@ -20,7 +20,8 @@ public class BtnBack : ExtendMonoBehaviour
 
     private void OnClickBtn()
     {
-        SceneManager.UnloadSceneAsync(_sSceneName);        
+        SceneManager.UnloadSceneAsync(_sSceneName);     
+        SceneManager.LoadSceneAsync("LeaderBoardScene");
     }
     
     //===================================================================== Local Methods

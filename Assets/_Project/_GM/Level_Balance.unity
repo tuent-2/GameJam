@@ -1001,7 +1001,8 @@ MonoBehaviour:
       sound: 0
       music: 0
       vibrate: 0
-    iCurrentLevel: 0
+    iCurrentLevel_Balance: 0
+    iCurrentLevel_FindOne: 0
 --- !u!4 &950362450
 Transform:
   m_ObjectHideFlags: 0

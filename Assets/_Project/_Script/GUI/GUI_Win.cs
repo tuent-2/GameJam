@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -130,6 +131,7 @@ public class GUI_Win : ExtendMonoBehaviour
 	private void OnClickLeave ()
 	{
 		SceneManager.UnloadSceneAsync(_sSceneName);
+		SceneManager.LoadSceneAsync("LeaderBoardScene");
 	}
     
     //===================================================================== Local Methods
