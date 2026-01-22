@@ -23,6 +23,7 @@ public class Character : ExtendMonoBehaviour
 
     public void UpdateVisualByData(LeaderBoardSO.LeaderBoard  value)
     {
+        DebugLog("real");
         _data = value;
         _tmpName.text = data.name;
         foreach (var ele in _arrSkin)
@@ -36,13 +37,15 @@ public class Character : ExtendMonoBehaviour
     
     public void FakeVisual()
     {
+        DebugLog("fake");
         _tmpName.text = "";
         foreach (var ele in _arrSkin)
         {
             ele.SetActive(false);
         }
         
-        _arrSkin[0].SetActive(true);
+        int randomIndex = Random.Range(0, _arrSkin.Length);
+        _arrSkin[randomIndex].SetActive(true);
         _tmpDes.text = "";
     }
 }
